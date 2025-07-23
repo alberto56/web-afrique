@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1E3A5F; /* Deep professional blue */
+  --color-primary-50: #EBF4FF; /* Very light blue */
+  --color-primary-100: #DBEAFE; /* Light blue */
+  --color-primary-200: #BFDBFE; /* Blue-200 */
+  --color-primary-300: #93C5FD; /* Blue-300 */
+  --color-primary-400: #60A5FA; /* Blue-400 */
+  --color-primary-500: #3B82F6; /* Blue-500 */
+  --color-primary-600: #2563EB; /* Blue-600 */
+  --color-primary-700: #1D4ED8; /* Blue-700 */
+  --color-primary-800: #1E40AF; /* Blue-800 */
+  --color-primary-900: #1E3A8A; /* Blue-900 */
+
+  /* Secondary Colors */
+  --color-secondary: #2C5282; /* Lighter blue for interactive elements */
+  --color-secondary-50: #EDF2F7; /* Gray-50 */
+  --color-secondary-100: #E2E8F0; /* Gray-100 */
+  --color-secondary-200: #CBD5E0; /* Gray-200 */
+  --color-secondary-300: #A0AEC0; /* Gray-300 */
+  --color-secondary-400: #718096; /* Gray-400 */
+  --color-secondary-500: #4A5568; /* Gray-500 */
+  --color-secondary-600: #2D3748; /* Gray-600 */
+  --color-secondary-700: #1A202C; /* Gray-700 */
+  --color-secondary-800: #171923; /* Gray-800 */
+  --color-secondary-900: #0F1419; /* Gray-900 */
+
+  /* Accent Colors */
+  --color-accent: #D97706; /* Warm terracotta */
+  --color-accent-50: #FFFBEB; /* Orange-50 */
+  --color-accent-100: #FEF3C7; /* Orange-100 */
+  --color-accent-200: #FDE68A; /* Orange-200 */
+  --color-accent-300: #FCD34D; /* Orange-300 */
+  --color-accent-400: #FBBF24; /* Orange-400 */
+  --color-accent-500: #F59E0B; /* Orange-500 */
+  --color-accent-600: #D97706; /* Orange-600 */
+  --color-accent-700: #B45309; /* Orange-700 */
+  --color-accent-800: #92400E; /* Orange-800 */
+  --color-accent-900: #78350F; /* Orange-900 */
+
+  /* Background Colors */
+  --color-background: #FAFAFA; /* Soft white */
+  --color-surface: #F7FAFC; /* Subtle gray */
+
+  /* Text Colors */
+  --color-text-primary: #2D3748; /* Dark gray */
+  --color-text-secondary: #718096; /* Medium gray */
+
+  /* Status Colors */
+  --color-success: #38A169; /* Natural green */
+  --color-success-50: #F0FFF4; /* Green-50 */
+  --color-success-100: #C6F6D5; /* Green-100 */
+  --color-success-500: #48BB78; /* Green-500 */
+  --color-success-600: #38A169; /* Green-600 */
+  --color-success-700: #2F855A; /* Green-700 */
+
+  --color-warning: #D69E2E; /* Amber */
+  --color-warning-50: #FFFBEB; /* Yellow-50 */
+  --color-warning-100: #FEF3C7; /* Yellow-100 */
+  --color-warning-500: #ECC94B; /* Yellow-500 */
+  --color-warning-600: #D69E2E; /* Yellow-600 */
+  --color-warning-700: #B7791F; /* Yellow-700 */
+
+  --color-error: #E53E3E; /* Clear red */
+  --color-error-50: #FED7D7; /* Red-50 */
+  --color-error-100: #FEB2B2; /* Red-100 */
+  --color-error-500: #F56565; /* Red-500 */
+  --color-error-600: #E53E3E; /* Red-600 */
+  --color-error-700: #C53030; /* Red-700 */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-out shadow-sm hover:shadow-md;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg shadow-sm border border-gray-100 p-6;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 ease-out;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-card {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .transition-smooth {
+    transition: all 300ms ease-out;
+  }
+
+  .transition-fast {
+    transition: all 200ms ease-out;
+  }
+}
