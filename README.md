@@ -76,7 +76,7 @@ The app is built with responsive design using Tailwind CSS breakpoints:
 
 ## 🙏 Acknowledgments
 
-- Built with [Rocket.new](https://rocket.new)
+- Built with Terre des jeunes Dev Prince Muloko
 - Powered by HTML and Tailwind CSS
 
-Built with ❤️ on Rocket.new
+Built with ❤️ on Terre des jeunes
