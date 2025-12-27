@@ -3,7 +3,7 @@ backend:
   repo: alberto56/web-afrique
   branch: main
   base_url: https://suresh-issue-82.dcycleproject.org
-  auth_endpoint: /auth/github/repo/6946e40a7c6e2b059bec6744
+  auth_endpoint: /auth/github/repo/694f516518f56cc358266565
 media_folder: static/uploads
 public_folder: /uploads
 collections:
